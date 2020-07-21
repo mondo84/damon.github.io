@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalContactComponent implements OnInit {
 
-  public title = 'Titulo Modal';
+  public title = 'Dejanos un Like';
   constructor() { }
 
   ngOnInit(): void {
