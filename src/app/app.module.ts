@@ -9,12 +9,14 @@ import { MaterialComponentsModule } from './material-components/material-compone
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalContactComponent } from './logged/modals/modal-contact/modal-contact.component';
 import { TeamComponent } from './logged/team/team.component';
+import { ModalSoporteComponent } from './logged/modals/modal-soporte/modal-soporte.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ModalContactComponent,
-    TeamComponent
+    TeamComponent,
+    ModalSoporteComponent
   ],
   imports: [
     BrowserModule,

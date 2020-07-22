@@ -1,3 +1,4 @@
+<!-- Toolbar -->
 <mat-toolbar class="toolbar-shadow" >
 
   <mat-toolbar-row class="row-1">
@@ -6,18 +7,20 @@
     </a>
     <span class="spacer-div"></span>
 
-    <div class="container-items" >
+    <div class="container-items">
       <a mat-button href="javascript:void(0);"
-          [mat-menu-trigger-for]="menu_categoria" >Categoria</a>
+          [mat-menu-trigger-for]="menu_servicios">Servicios</a>
       <a mat-button href="javascript:void(0);">Mision</a>
       <a mat-button href="javascript:void(0);">Vision</a>
       <a mat-button href="javascript:void(0);">Quienes somos</a>
       <a mat-button href="javascript:void(0);">Acerca de</a>
 
-      <mat-menu #menu_categoria="matMenu">
-        <a mat-menu-item href="javascript:void(0);">Data Center</a>
-        <a mat-menu-item href="javascript:void(0);">Desarrollo Web</a>
-        <a mat-menu-item href="javascript:void(0);">Soporte Tecnico</a>
+      <mat-menu #menu_servicios="matMenu">
+        <a mat-menu-item href="javascript:void(0);" [routerLink]="['/']">Home</a>
+        <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/dc']">Data Center</a>
+        <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/desarrollo']">Desarrollo Web</a>
+        <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/soporte']" >Soporte Tecnico</a>
+        <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/cctv']" >CCTV</a>
       </mat-menu>
     </div>
   </mat-toolbar-row>
@@ -31,51 +34,42 @@
         <mat-icon>more_vert</mat-icon>
       </button>
       <mat-menu #menuToolbar="matMenu" xPosition="before">
-        <a mat-menu-item href="javascript:void(0);">Categoria</a>
+        <a mat-menu-item href="javascript:void(0);" [matMenuTriggerFor]="subMenuServicios">Servicios</a>
         <a mat-menu-item href="javascript:void(0);">Mision</a>
         <a mat-menu-item href="javascript:void(0);">Vision</a>
         <a mat-menu-item href="javascript:void(0);">Quienes somos</a>
         <a mat-menu-item href="javascript:void(0);">Acerca de</a>
+
+        <mat-menu #subMenuServicios="matMenu">
+          <a mat-menu-item href="javascript:void(0);">Data Center</a>
+          <a mat-menu-item href="javascript:void(0);">Desarrollo Web</a>
+          <a mat-menu-item href="javascript:void(0);">Soporte Tecnico</a>
+        </mat-menu>
       </mat-menu>
     </div>
   </mat-toolbar-row>
 
   <mat-toolbar-row class="row-3">
+    <a mat-button href="javascript:void(0);"
+          [mat-menu-trigger-for]="menu_servicios" class="item">Servicios</a>
     <a class="item" mat-button href="javascript:void(0);">Categoria</a>
     <a class="item" mat-button href="javascript:void(0);">Mision</a>
     <a class="item" mat-button href="javascript:void(0);">Vision</a>
     <a class="item" mat-button href="javascript:void(0);">Quienes somos</a>
     <a class="item" mat-button href="javascript:void(0);">Acerca de</a>
+
+    <mat-menu #menu_servicios="matMenu">
+      <a mat-menu-item href="javascript:void(0);">Data Center</a>
+      <a mat-menu-item href="javascript:void(0);">Desarrollo Web</a>
+      <a mat-menu-item href="javascript:void(0);">Soporte Tecnico</a>
+    </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar >
 
+
 <!-- Main container -->
 <div class="main-container" >
-
-  <div class="title" >
-
-    <div class="main-text">
-      <!-- C:\Users\yesid\Desktop\servicios-it\service-it\src\assets\img\LOGOIT.PNG -->
-      <!-- src\assets\img\LOGOIT.PNG -->
-      <!-- <img src="./../../../assets/img/LOGOIT.PNG" alt=""> -->
-      <img src="assets/img/LOGOIT.PNG" alt="Logo principal">
-      En Desarrollo
-      <mat-progress-bar class="progress" mode="buffer"></mat-progress-bar>
-    </div>
-    <div class="contact" >
-      <div class="wt">
-        <!-- <img src="assets/img/whatsapp.png" alt="Contacto"> -->
-        <img src="assets/img/whatsapp.png" alt="Contacto">
-        300 2523139
-      </div>
-      <div class="email">
-        <!-- <img src="assets/img/email.png" alt="Correo"> -->
-        <img src="assets/img/email.png" alt="Contacto">
-        danmontechnology@gmail.com
-      </div>
-
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 
   <button class="btn-like mat-elevation-z8" mat-fab
           (click)="openModal()">
@@ -85,6 +79,5 @@
   <button class="btn-mail mat-elevation-z8" mat-fab >
     <i class="material-icons md-18">mail_outline</i>
   </button>
-  <!-- <span class="" >Por: Soluciones TI @2020</span> -->
 </div>
 

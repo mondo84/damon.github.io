@@ -1,0 +1,53 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  max-width: 1200px;
+  margin-top: 20px;
+  // margin-left: auto;
+  // margin-right: auto;
+  padding: 0 10px;
+  // background-color: orange;
+  justify-content: center;
+
+  .item {
+    // background-color: #458745;
+    mat-card {
+      transition: opacity 300ms linear, box-shadow 300ms ease;
+
+      mat-card-header {
+        mat-card-title {
+          font-size: 15px;
+        }
+      }
+
+      img {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      &:hover {
+        opacity: .900;
+        box-shadow: 0 0 2px 2px #ffffff;
+      }
+
+      &:active {
+        scale: .990;
+      }
+
+    }
+  }
+
+
+  @media screen and (min-width: 599.99px) {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+  @media screen and (min-width: 799.99px) {
+
+    grid-template-columns: repeat(3, minmax(150px, 250px) );
+    column-gap: 20px;
+  }
+}
