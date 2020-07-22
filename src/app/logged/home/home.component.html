@@ -1,9 +1,10 @@
-<!-- Toolbar -->
-<mat-toolbar class="toolbar-shadow" >
+<!-- Toolbar class="toolbar-shadow" -->
+<mat-toolbar class="mat-elevation-z5">
 
   <mat-toolbar-row class="row-1">
-    <a class="txt-sigla" mat-button href="javascript:void(0);">
-      Danmon Technology
+    <a class="logo-1" mat-button href="javascript:void(0);">
+      <!-- Danmon Technology -->
+      <img class="img-1" src="assets/img/LOGOIT.PNG" alt="Logo ppal">
     </a>
     <span class="spacer-div"></span>
 
@@ -26,7 +27,10 @@
   </mat-toolbar-row>
 
   <mat-toolbar-row class="row-2">
-    <a class="txt-sigla" mat-button href="javascript:void(0);">Danmon Technology</a>
+    <a class="logo-2" mat-button href="javascript:void(0);">
+      <img class="img-2-1" src="assets/img/LOGOIT.PNG" alt="Logo ppal">
+      <img class="img-2-2" src="assets/img/LOGOIT-THUMNAIL.png" alt="Logo ppal">
+    </a>
     <span class="spacer-div"></span>
 
     <div class="container-items btn-menu" >
@@ -41,9 +45,11 @@
         <a mat-menu-item href="javascript:void(0);">Acerca de</a>
 
         <mat-menu #subMenuServicios="matMenu">
-          <a mat-menu-item href="javascript:void(0);">Data Center</a>
-          <a mat-menu-item href="javascript:void(0);">Desarrollo Web</a>
-          <a mat-menu-item href="javascript:void(0);">Soporte Tecnico</a>
+          <a mat-menu-item href="javascript:void(0);" [routerLink]="['/']">Home</a>
+          <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/dc']">Data Center</a>
+          <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/desarrollo']">Desarrollo Web</a>
+          <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/soporte']" >Soporte Tecnico</a>
+          <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/cctv']" >CCTV</a>
         </mat-menu>
       </mat-menu>
     </div>
@@ -59,9 +65,11 @@
     <a class="item" mat-button href="javascript:void(0);">Acerca de</a>
 
     <mat-menu #menu_servicios="matMenu">
-      <a mat-menu-item href="javascript:void(0);">Data Center</a>
-      <a mat-menu-item href="javascript:void(0);">Desarrollo Web</a>
-      <a mat-menu-item href="javascript:void(0);">Soporte Tecnico</a>
+      <a mat-menu-item href="javascript:void(0);" [routerLink]="['/']">Home</a>
+      <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/dc']">Data Center</a>
+      <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/desarrollo']">Desarrollo Web</a>
+      <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/soporte']" >Soporte Tecnico</a>
+      <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/cctv']" >CCTV</a>
     </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar >
