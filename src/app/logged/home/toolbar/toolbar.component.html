@@ -1,0 +1,74 @@
+<mat-toolbar class="mat-elevation-z6">
+
+  <mat-toolbar-row class="row-1">
+    <a class="logo-1" mat-button href="javascript:void(0);">
+      <!-- Danmon Technology -->
+      <img class="img-1" src="assets/img/LOGOIT.PNG" alt="Logo ppal">
+    </a>
+    <span class="spacer-div"></span>
+
+    <div class="container-items">
+      <a mat-button href="javascript:void(0);"
+          [mat-menu-trigger-for]="menu_servicios">Servicios</a>
+      <a mat-button href="javascript:void(0);">Mision</a>
+      <a mat-button href="javascript:void(0);">Vision</a>
+      <a mat-button href="javascript:void(0);">Quienes somos</a>
+      <a mat-button href="javascript:void(0);">Acerca de</a>
+
+      <mat-menu #menu_servicios="matMenu">
+        <a mat-menu-item href="javascript:void(0);" [routerLink]="['/']">Home</a>
+        <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/dc']">Data Center</a>
+        <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/desarrollo']">Desarrollo Web</a>
+        <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/soporte']" >Soporte Tecnico</a>
+        <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/cctv']" >CCTV</a>
+      </mat-menu>
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="row-2">
+    <a class="logo-2" mat-button href="javascript:void(0);">
+      <img class="img-2-1" src="assets/img/LOGOIT.PNG" alt="Logo ppal">
+      <img class="img-2-2" src="assets/img/LOGOIT-THUMNAIL.png" alt="Logo ppal">
+    </a>
+    <span class="spacer-div"></span>
+
+    <div class="container-items btn-menu" >
+      <button mat-icon-button [matMenuTriggerFor]="menuToolbar">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menuToolbar="matMenu" xPosition="before">
+        <a mat-menu-item href="javascript:void(0);" [matMenuTriggerFor]="subMenuServicios">Servicios</a>
+        <a mat-menu-item href="javascript:void(0);">Mision</a>
+        <a mat-menu-item href="javascript:void(0);">Vision</a>
+        <a mat-menu-item href="javascript:void(0);">Quienes somos</a>
+        <a mat-menu-item href="javascript:void(0);">Acerca de</a>
+
+        <mat-menu #subMenuServicios="matMenu">
+          <a mat-menu-item href="javascript:void(0);" [routerLink]="['/']">Home</a>
+          <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/dc']">Data Center</a>
+          <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/desarrollo']">Desarrollo Web</a>
+          <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/soporte']" >Soporte Tecnico</a>
+          <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/cctv']" >CCTV</a>
+        </mat-menu>
+      </mat-menu>
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="row-3">
+    <a mat-button href="javascript:void(0);"
+          [mat-menu-trigger-for]="menu_servicios" class="item">Servicios</a>
+    <a class="item" mat-button href="javascript:void(0);">Mision</a>
+    <a class="item" mat-button href="javascript:void(0);">Vision</a>
+    <a class="item" mat-button href="javascript:void(0);">Quienes somos</a>
+    <a class="item" mat-button href="javascript:void(0);">Acerca de</a>
+
+    <mat-menu #menu_servicios="matMenu">
+      <a mat-menu-item href="javascript:void(0);" [routerLink]="['/']">Home</a>
+      <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/dc']">Data Center</a>
+      <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/desarrollo']">Desarrollo Web</a>
+      <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/soporte']" >Soporte Tecnico</a>
+      <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/cctv']" >CCTV</a>
+    </mat-menu>
+  </mat-toolbar-row>
+
+</mat-toolbar >

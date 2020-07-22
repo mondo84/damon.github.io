@@ -13,6 +13,7 @@ import { DcComponent } from './dc/dc.component';
 import { DesarrolloComponent } from './desarrollo/desarrollo.component';
 import { CamarasComponent } from './camaras/camaras.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { InicioComponent } from './inicio/inicio.component';
     DcComponent,
     DesarrolloComponent,
     CamarasComponent,
-    InicioComponent
+    InicioComponent,
+    ToolbarComponent
   ],
   imports: [
     CommonModule,
