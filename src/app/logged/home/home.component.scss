@@ -1,29 +1,11 @@
 .main-container {
   width: 100%;
   min-height: calc(100vh - 56px);
-  // background-color: #1A1D53;
-  background-color: #b3dfe4;
   position: relative;
 
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: min-content;
   gap: 4px;
-}
-
-.btn-mail, .btn-like {
-  position: fixed;
-}
-
-.btn-like {
-  bottom: 70px;
-  right: 10px;
-  background-color: #6abcf3;
-}
-
-.btn-mail {
-  bottom: 10px;
-  right: 10px;
-  background-color: #26b88c;
 }
 

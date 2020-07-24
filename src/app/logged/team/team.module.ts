@@ -1,25 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
+// Modulo de rutas de este modulo.
+import { TeamRoutingModule } from './team-routing.module';
 
 // Modulo de material design para los hijos de este modulo.
 import { MaterialComponentsModule } from 'src/app/material-components/material-components.module';
-
-// Componente hijo de home
-import { InicioComponent } from './inicio/inicio.component';
-
+import { TeamComponent } from './team.component';
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    InicioComponent
+    TeamComponent
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule,
+    TeamRoutingModule,
     MaterialComponentsModule  // Modulo de material design.
   ]
 })
-export class HomeModule { }
+export class TeamModule { }

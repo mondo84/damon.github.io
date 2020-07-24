@@ -8,20 +8,24 @@
     <span class="spacer-div"></span>
 
     <div class="container-items">
-      <a mat-button href="javascript:void(0);" [routerLink]="['/']">Home</a>
-      <a mat-button href="javascript:void(0);"
-          [mat-menu-trigger-for]="menu_servicios">Servicios</a>
+      <a mat-button href="javascript:void(0);" [routerLink]="['/home']" routerLinkActive="activeLink">Home</a>
+
+      <!-- btn | menu -->
+      <a mat-button href="javascript:void(0);" [mat-menu-trigger-for]="menu_servicios">
+          Servicios <span class="material-icons rotate">arrow_drop_down</span>
+      </a>
+      <mat-menu #menu_servicios="matMenu" >
+        <a mat-menu-item [routerLink]="['/servicios/dc']" routerLinkActive="activeLink">Data Center</a>
+        <a mat-menu-item [routerLink]="['/servicios/desarrollo']" routerLinkActive="activeLink">Desarrollo Web</a>
+        <a mat-menu-item [routerLink]="['servicios/soporte']" routerLinkActive="activeLink">Soporte Tecnico</a>
+        <a mat-menu-item [routerLink]="['/servicios/cctv']" routerLinkActive="activeLink">CCTV</a>
+      </mat-menu>
+      <!-- # btn | menu -->
+
       <a mat-button href="javascript:void(0);">Mision</a>
       <a mat-button href="javascript:void(0);">Vision</a>
-      <a mat-button href="javascript:void(0);">Quienes somos</a>
-      <a mat-button href="javascript:void(0);">Acerca de</a>
-
-      <mat-menu #menu_servicios="matMenu">
-        <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/dc']">Data Center</a>
-        <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/desarrollo']">Desarrollo Web</a>
-        <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/soporte']" >Soporte Tecnico</a>
-        <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/cctv']" >CCTV</a>
-      </mat-menu>
+      <a mat-button [routerLink]="['/contactanos']" routerLinkActive="activeLink">Quienes somos</a>
+      <a mat-button [routerLink]="['/about']" routerLinkActive="activeLink">Acerca de</a>
     </div>
   </mat-toolbar-row>
 
@@ -44,10 +48,10 @@
         <a mat-menu-item href="javascript:void(0);">Acerca de</a>
 
         <mat-menu #subMenuServicios="matMenu">
-          <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/dc']">Data Center</a>
-          <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/desarrollo']">Desarrollo Web</a>
-          <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/soporte']" >Soporte Tecnico</a>
-          <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/cctv']" >CCTV</a>
+          <a mat-menu-item href="javascript:void(0);" [routerLink]="['/servicios/dc']">Data Center</a>
+          <a mat-menu-item href="javascript:void(0);" [routerLink]="['/servicios/desarrollo']">Desarrollo Web</a>
+          <a mat-menu-item href="javascript:void(0);" [routerLink]="['/servicios/soporte']" >Soporte Tecnico</a>
+          <a mat-menu-item href="javascript:void(0);" [routerLink]="['/servicios/cctv']" >CCTV</a>
         </mat-menu>
       </mat-menu>
     </div>
@@ -63,10 +67,10 @@
     <a class="item" mat-button href="javascript:void(0);">Acerca de</a>
 
     <mat-menu #menu_servicios="matMenu">
-      <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/dc']">Data Center</a>
-      <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/desarrollo']">Desarrollo Web</a>
-      <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/soporte']" >Soporte Tecnico</a>
-      <a mat-menu-item href="javascript:void(0);" [routerLink]="['servicios/cctv']" >CCTV</a>
+      <a mat-menu-item href="javascript:void(0);" [routerLink]="['/servicios/dc']">Data Center</a>
+      <a mat-menu-item href="javascript:void(0);" [routerLink]="['/servicios/desarrollo']">Desarrollo Web</a>
+      <a mat-menu-item href="javascript:void(0);" [routerLink]="['/servicios/soporte']" >Soporte Tecnico</a>
+      <a mat-menu-item href="javascript:void(0);" [routerLink]="['/servicios/cctv']" >CCTV</a>
     </mat-menu>
   </mat-toolbar-row>
 

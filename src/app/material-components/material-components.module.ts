@@ -10,6 +10,9 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatCardModule} from '@angular/material/card';
 
+// Componentes de formulario
+import {MatInputModule} from '@angular/material/input';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -20,7 +23,8 @@ import {MatCardModule} from '@angular/material/card';
     MatMenuModule,
     MatProgressBarModule,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule
   ],
   exports: [
     MatButtonModule,
@@ -29,7 +33,8 @@ import {MatCardModule} from '@angular/material/card';
     MatMenuModule,
     MatProgressBarModule,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule
   ]
 })
 export class MaterialComponentsModule { }

@@ -26,7 +26,9 @@
   }
 
   .row-1 {
-    .container-items { font-size: 12px; }
+    .container-items {
+      font-size: 12px;
+    }
   }
 
   .row-2 {
@@ -58,4 +60,8 @@
     .row-1 { display: inherit; }
 
   }
+}
+
+.activeLink {
+  background-color: rgba(187, 187, 187, 0.466);
 }

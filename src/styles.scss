@@ -1,12 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-
+* { box-sizing: border-box; }
 html, body { height: 100%; }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   position: static;
+  background-color: #b3dfe4;
+
 }
 
 .spacer-div {
   flex: 1 1 auto;
 }
+
