@@ -1,20 +1,43 @@
-<div class="title" >
+<div class="container-inicio" #contenedor>
+  <div class="title" >
 
-  <div class="main-text">
-    En Desarrollo
-    <!-- <mat-progress-bar class="progress" mode="buffer"></mat-progress-bar> -->
-  </div>
-  <div class="contact" >
-    <div class="wt">
-      <!-- <img src="assets/img/whatsapp.png" alt="Contacto"> -->
-      <img src="assets/img/whatsapp.png" alt="Contacto">
-      300 2523139
+    <div class="main-text">
+      En Desarrollo
+      <!-- <mat-progress-bar class="progress" mode="buffer"></mat-progress-bar> -->
     </div>
-    <div class="email">
-      <!-- <img src="assets/img/email.png" alt="Correo"> -->
-      <img src="assets/img/email.png" alt="Contacto">
-      danmontechnology@gmail.com
-    </div>
+    <div class="contact" >
+      <div class="wt">
+        <!-- <img src="assets/img/whatsapp.png" alt="Contacto"> -->
+        <img src="assets/img/whatsapp.png" alt="Contacto">
+        300 2523139
+      </div>
+      <div class="email">
+        <!-- <img src="assets/img/email.png" alt="Correo"> -->
+        <img src="assets/img/email.png" alt="Contacto">
+        danmontechnology@gmail.com
+      </div>
 
+    </div>
   </div>
+
+
+  <!-- class="float-button" -->
+  <button #btnRef mat-fab>
+    <i class="material-icons md-18">add</i>
+  </button>
+
+  <nav #menuRef class="circular-menu" >
+    <ul>
+      <li>
+        <a href="javascript:void(0);"> <i class="material-icons md-18">home</i> </a>
+      </li>
+      <li>
+        <a href="javascript:void(0);"> <span class="material-icons">favorite_border</span> </a>
+      </li>
+      <li>
+        <a href="javascript:void(0);"> <span class="material-icons">loyalty</span> </a>
+      </li>
+    </ul>
+  </nav>
 </div>
+

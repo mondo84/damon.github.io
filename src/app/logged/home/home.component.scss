@@ -1,11 +1,6 @@
 .main-container {
   width: 100%;
-  min-height: calc(100vh - 56px);
-  position: relative;
+  min-height: calc(100vh - 77px);
 
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: min-content;
-  gap: 4px;
 }
 

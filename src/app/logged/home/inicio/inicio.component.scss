@@ -1,66 +1,116 @@
-.title {
-  // background-color: #087083;
-  padding-top: 30px;
+// Variables CSS
+:root {
+  --animation-time: .1s
+}
 
-  .main-text, .contact { display: flex;  }
+// Variables SASS
+$color: #4891ff;
+$animation-time: .3s;
 
-  .main-text {
-    // background-color: #25C998;
-    font-size: 14px;  //55px
-    color: #505050;
-    justify-content: center;
-    align-items: center;
-    margin: 15px 0;
-    flex-direction: column;
+.container-inicio {
+  min-height: calc(100vh - 77px);
+  //height: calc(100vh - 77px);
+  background-color: #EEEEEE;
+  // position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // overflow: hidden;
 
-    img {
-      max-width: 400px;
-      width: 100%;
-    }
+  .title {
+    font-size: 12px;
 
-    .progress {
-      max-width: 400px;
-      width: 40%;
+    .contact {
+      text-align: center;
     }
   }
 
-  .contact {
-    font-size: 11px;  // 25px
-    flex-direction: column;
-    align-items: center;
-    // background-color: #25C998;
+  ::ng-deep .mat-fab {
+    // position: absolute;
+    position: fixed;
+     z-index: 100;
+     bottom: 1rem;
+     right: 1rem;
+     width: 3rem;
+     height: 3rem;
+     background-color: $color;
+     // transition: transform var(--animation-time) linear;
+     transition: transform $animation-time linear;
 
-    .wt, .email {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 10px; color: #505050;
-      img { margin-right: 10px; }
-      word-break: break-all;
+    .mat-button-wrapper { padding: 0; }
+  }
+
+  .circular-menu {
+    background-color: rgb(50, 174, 205);
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    transform: scale(0) rotate(-360deg);
+    // position: absolute;
+    position: fixed;
+    right: -5.5rem;
+    bottom: -5.5rem;
+    // outline: 1px solid white;
+    transition: all $animation-time linear;
+    box-shadow: 0 0 10px 1px rgb(26, 26, 26);
+    z-index: 50;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        position: absolute;
+        width: 2rem;
+        top: 2rem;
+        left: calc(50% - 1rem); // centra a la mitad del padre y resta la mitad del ancho del li
+        text-align: center;
+        transform-origin: center 6rem;
+
+        a { text-decoration: none; color: white; display: block; }
+      }
     }
+  }
+
+  .pulsed {
+    transform: rotate(90deg);
+    background: darken($color, 15); // Oscurece el color
+  }
+
+  .expand {
+    transform: scale(1) rotate(0);
   }
 
   @media screen and (min-width: 599.99px) {
+    .title {
+      .main-text {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
 
-    .main-text {
-      font-size: 30px;  //55px
-    }
-
-    .contact {
-      font-size: 20px;  // 25px
-    }
-
-  }
-
-  @media screen and (min-width: 799.99px) {
-
-    .main-text {
-      font-size: 50px;  //55px
-    }
-
-    .contact {
-      font-size: 25px;  // 25px
+      .contact {
+        font-size: 20px;
+        .wt, .email {
+          display: flex; align-items: center; justify-content: center;
+          img { margin-right: 4px; }
+        }
+      }
     }
   }
-
 }
+
+$elements: 3; // Cantidad de items
+
+// Recorre los items empezando desde el 2do.
+@for $i from 2 through $elements {
+  .circular-menu li:nth-child(#{$i}) {
+    $rotation: 90 / ($elements - 1) * ($i - 1); // Divide 90 grados del circulo padre entre,
+    transform: rotate(-#{$rotation}deg);        // gira especto al menu circular
+
+    // Acomoda los los grados rotates items. Girando en su propio eje
+    a { transform: rotate(#{$rotation}deg); }
+  }
+}
+
