@@ -44,6 +44,16 @@ $font-size-large: 15px;
       color: $color-text-black;
     }
 
+    .container-img-about {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+
+      // background-color: yellow;
+      img { width: 40px; border-radius: 50%;
+        box-shadow: 0 0 4px -1px #000;}
+    }
+
     @media screen and (min-width: 599.99px) {
       p, .text-copyright { font-size: $font-size-large; }
       .text-copyright { height: 60px; }
