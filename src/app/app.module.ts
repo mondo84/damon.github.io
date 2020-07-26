@@ -10,13 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalContactComponent } from './logged/modals/modal-contact/modal-contact.component';
 import { ModalSoporteComponent } from './logged/modals/modal-soporte/modal-soporte.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ModalContactComponent,
     ModalSoporteComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
