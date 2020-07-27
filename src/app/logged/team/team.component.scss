@@ -3,37 +3,40 @@ $color-text-white: #F5F5F5;
 $font-size-small: 12px;
 $font-size-large: 15px;
 $gradient-green: linear-gradient(90deg, #24C192 2%, transparent);
+$gree-color: #24C192;
+$white-color: #FFFFFF;
 
 .container-content {
-  background-color: #F5F5F5;
+  background-color: $color-text-white;
   width: 100%;
-  padding-bottom: 10px;
+  padding: 10px 0;
   font-size: $font-size-small;
 
-  .header-organigrama {
-    min-height: 40px;
-    display: flex;
-    padding-right: 2px;
-    margin-bottom: 10px;
-
-    .shape-header {
-      width: 100%;
-      word-break: break-all;
-      padding-left: 10px;
-      background: $gradient-green;
-
-      display: flex;
-      align-items: center;
-      color: $color-text-white;
-    }
-  }
-
   .txt-description {
-    width: 90%;
+    width: 95%;
+    max-width: 650px;
     min-height: 200px;
     padding: 20px;
-    margin: auto;
+    padding-top: 30px;
+    margin: 60px auto;
     text-align: justify;
+    background-color: $white-color;
+    box-shadow: 0 4px 4px -2px #727272;
+    position: relative;
+
+    .txt-title {
+      position: absolute;
+      top: -20px;
+      left: 10px;
+      height: 40px;
+      padding: 15px;
+      box-shadow: 0 4px 4px -2px #727272;
+      background-color: $gree-color;
+      color: $color-text-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   @media screen and (min-width: 599.99px) {

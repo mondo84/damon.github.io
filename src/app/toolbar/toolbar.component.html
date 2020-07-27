@@ -22,8 +22,8 @@
       </mat-menu>
       <!-- # btn | menu -->
 
-      <a mat-button href="javascript:void(0);">Mision</a>
-      <a mat-button href="javascript:void(0);">Vision</a>
+      <a mat-button [routerLink]="['/mision']" routerLinkActive="activeLink">Mision</a>
+      <a mat-button [routerLink]="['/vision']" routerLinkActive="activeLink">Vision</a>
       <a mat-button [routerLink]="['/contactanos']" routerLinkActive="activeLink">Quienes somos</a>
       <a mat-button [routerLink]="['/about']" routerLinkActive="activeLink">Acerca de</a>
     </div>
@@ -48,8 +48,8 @@
           <a mat-menu-item [routerLink]="['/servicios/soporte']" routerLinkActive="activeLink">Soporte Tecnico</a>
           <a mat-menu-item [routerLink]="['/servicios/cctv']" routerLinkActive="activeLink" >CCTV</a>
         </mat-menu>
-        <a mat-menu-item >Mision</a>
-        <a mat-menu-item >Vision</a>
+        <a mat-menu-item [routerLink]="['/mision']" routerLinkActive="activeLink" >Mision</a>
+        <a mat-menu-item [routerLink]="['/vision']" routerLinkActive="activeLink" >Vision</a>
         <a mat-menu-item [routerLink]="['/contactanos']" routerLinkActive="activeLink">Quienes somos</a>
         <a mat-menu-item [routerLink]="['/about']" routerLinkActive="activeLink">Acerca de</a>
       </mat-menu>
@@ -62,8 +62,8 @@
           [mat-menu-trigger-for]="menu_servicios" class="item">
           Servicios <span class="material-icons rotate">arrow_drop_down</span>
     </a>
-    <a class="item" mat-button href="javascript:void(0);">Mision</a>
-    <a class="item" mat-button href="javascript:void(0);">Vision</a>
+    <a class="item" mat-button [routerLink]="['/mision']" routerLinkActive="activeLink">Mision</a>
+    <a class="item" mat-button [routerLink]="['/vision']" routerLinkActive="activeLink">Vision</a>
     <a class="item" mat-button [routerLink]="['/contactanos']" routerLinkActive="activeLink">Quienes somos</a>
     <a class="item" mat-button [routerLink]="['/about']" routerLinkActive="activeLink">Acerca de</a>
 
